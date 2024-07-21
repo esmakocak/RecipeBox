@@ -17,6 +17,7 @@
 		409427242C4C5789003B523A /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427232C4C5789003B523A /* FavoritesView.swift */; };
 		409427262C4C5795003B523A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427252C4C5795003B523A /* SettingsView.swift */; };
 		409427282C4D346E003B523A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427272C4D346E003B523A /* TabBar.swift */; };
+		4094272A2C4D3C11003B523A /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427292C4D3C11003B523A /* RecipeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		409427232C4C5789003B523A /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		409427252C4C5795003B523A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		409427272C4D346E003B523A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		409427292C4D3C11003B523A /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		409427192C4C56F7003B523A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				409427292C4D3C11003B523A /* RecipeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				4094271E2C4C574D003B523A /* HomeView.swift in Sources */,
 				4094270C2C4C553B003B523A /* ContentView.swift in Sources */,
 				4094270A2C4C553B003B523A /* RecipeSaverApp.swift in Sources */,
+				4094272A2C4D3C11003B523A /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

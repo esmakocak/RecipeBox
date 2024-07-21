@@ -14,6 +14,7 @@ struct FavoritesView: View {
                 .padding()
                 .navigationTitle("Favorites")
         }
+        .navigationViewStyle(.stack)
     }
 }
 

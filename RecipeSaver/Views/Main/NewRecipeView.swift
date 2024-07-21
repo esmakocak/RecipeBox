@@ -13,6 +13,7 @@ struct NewRecipeView: View {
             Text("New Recipe")
                 .navigationTitle("New Recipe")
         }
+        .navigationViewStyle(.stack)
     }
 }
 
