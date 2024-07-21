@@ -37,20 +37,20 @@ extension Recipe {
     static let all: [Recipe] = [
         Recipe(
             name: "Creamy Carrot Soup",
-            image: "https://www.forksoverknives.com/w-content/uploads/fly-images/98892/Creamy-Carrot-Soup-for-Wordpress-360x270-c-jpg",
+            image: "https://midwestfoodieblog.com/wp-content/uploads/2019/11/FINAL-vegan-carrot-soup-1-7_1.jpg",
             description: "This bold-hued soup is perfectly sweet and seriously comforting. Peeling the red bell pepper helps make this carrot soup extra silky. Dress it up with a drizzle of rich cashew cream, pomegranate seeds, and chopped fresh parsley for a festive fall presentation.",
-            ingredients: "% cup cashews\n1 medium onion, cut into X-inch dice (2 cups)\n1% pounds carrots, cut into 2-inch dice (3% cups)\n1 red bell pepper, peeled and cut into X-inch dice (1 cup)\n1 sprig fresh rosemary\n1 sprig fresh thymeln1 large fresh sage leaf\n4 cloves garlic, minced\n1 tablespoon lemon juicelnSea salt and freshly ground black pepper or cayenne pepper, to tasteln cup fresh pomegranate seeds\n2 tablespoons finely chopped fresh parsley",
-            directions: "In a small bowl, cover the cashews with 1 cup hot water; let soak 20 minutes. Transfer cashews and remaining liquid to a blender; blend until smooth and creamy. Set aside. \nIn a saucepan, combine onion, carrots, bell pepper, rosemary, thyme, sage, and garlic. Add X cup water and sauté over medium heat for 15 to 20 minutes, or until carrots are tender. InRemove pan from heat. Let vegetables cool for 10 minutes; then remove rosemary sprigs and thyme leaf. InTransfer sauteed vegetables to a blender, and puree to a smooth paste. Return pureed vegetables to saucepan and add 3 cups water and 1 tablespoon lemon juice. Season with salt and pepper. Bring soup to boiling. InTo serve, place soup in individual bowls, drizzle with cashew cream, and garnish with pomegranate seeds and parsley.",
+            ingredients: "% cup cashews\n1 medium onion, cut into 2-inch dice (2 cups)\n1% pounds carrots, cut into 2-inch dice (3% cups)\n1 red bell pepper, peeled and cut into 2-inch dice (1 cup)\n1 sprig fresh rosemary\n1 sprig fresh thyme\n1 large fresh sage leaf\n4 cloves garlic, minced\n1 tablespoon lemon juice\nSea salt and freshly ground black pepper or cayenne pepper, to taste\n cup fresh pomegranate seeds\n2 tablespoons finely chopped fresh parsley",
+            directions: "In a small bowl, cover the cashews with 1 cup hot water; let soak 20 minutes. Transfer cashews and remaining liquid to a blender; blend until smooth and creamy. Set aside. \nIn a saucepan, combine onion, carrots, bell pepper, rosemary, thyme, sage, and garlic. Add 2 cup water and sauté over medium heat for 15 to 20 minutes, or until carrots are tender. InRemove pan from heat. Let vegetables cool for 10 minutes; then remove rosemary sprigs and thyme leaf. InTransfer sauteed vegetables to a blender, and puree to a smooth paste. Return pureed vegetables to saucepan and add 3 cups water and 1 tablespoon lemon juice. Season with salt and pepper. Bring soup to boiling. InTo serve, place soup in individual bowls, drizzle with cashew cream, and garnish with pomegranate seeds and parsley.",
             category: "Soup",
             datePublished: "2019-11-11",
             url: "https://www.forksoverknives.com/recipes/vegan-soups-stews/creamy-carrot-soup/"
             ),
         
         Recipe(
-            name: "Kale, Apple, and Quinoa Salad",
-            image: "https://www.forksoverknives.com/w-content/uploads/fly-images/98341/Kale-Apple-Quinoa-Salad-wordpress-360x278-cajpg",
+            name: "Apple, and Quinoa Salad",
+            image: "https://www.recipegirl.com/wp-content/uploads/2016/09/Spinach-and-Quinoa-Salad-with-Apple.jpeg",
             description: "Each bite of this colorful salad is filled with the flavors of favorite fall ingredients such as apples, butternut squash, and pumpkin seeds. For optimum freshness and texture, wait to add the dressing until just before serving. InnNote that this recipe calls for cooked quinoa, so have that ready to go: For 1% cups cooked quinoa, rinse and drain 4 cup quinoa; cook according to package directions; and drain if needed. Check out our Grains Cooking Guide for more tips on prepping grains like a pro.",
-            ingredients: "2 cups inch pieces peeled butternut squash\n% cup pumpkin seeds\n5% teaspoon ground cinnamon\n1 lemon\n2 tablespoons pure maple syrup\n1 tablespoon Dijon mustard\n3 cups stemmed and chopped kale\n1% cups cooked quinoaln cup chopped applelnk cup sliced green onionsSea salt and freshly ground black pepper, to taste",
+            ingredients: "2 cups inch pieces peeled butternut squash\n% cup pumpkin seeds\n5% teaspoon ground cinnamon\n1 lemon\n2 tablespoons pure maple syrup\n1 tablespoon Dijon mustard\n3 cups stemmed and chopped kale\n1% cups cooked quinoa\n cup chopped apple\n1 cup sliced green onionsSea salt and freshly ground black pepper, to taste",
             directions: "Preheat oven to 400°F. Line a 15x10-inch baking pan with parchment paper or a silicone baking mat. Arrange squash in the prepared baking pan. Roast 20 to 25 minutes or until squash is tender, brushing lightly with water if squash starts to look dry. Cool slightly on a wire rack. InMeanwhile, in a small bowl toss together pumpkin seeds and 3 teaspoon water; sprinkle with cinnamon. Place pumpkin seeds in a small, shallow baking pan. Roast 5 minutes or until lightly toasted; cool\nFor dressing, remove 1 teaspoon zest and squeeze 2 tablespoons juice from lemon. In a small bowl whisk together lemon zest and juice, maple syrup, and mustard. InIn a large bowl combine kale, quinoa, apple, green onions, and roasted squash. Add dressing; toss to coat. Season with salt and pepper. Top with pumpkin seeds.",
             category: "Salad",
             datePublished: "2019-10-22",
@@ -59,10 +59,10 @@ extension Recipe {
         
         Recipe(
             name:"Kale Bruschetta",
-            image: "https://www.forksoverknives.com/wp-content/uploads/fly-images/25202/Kale-Bruschetta-WP=368×270-c-jp9",
+            image: "https://img.taste.com.au/FYjm5H3D/w720-h480-cfill-q80/taste/2016/11/blt-bruschettas-89298-1.jpeg",
             description: "We adore this as an appetizer, and so does everyohe else. It is always the first empty platter at our holiday party. No one knows it is plant-based; they just know it is so yummy. \nFrom The Prevent and Reverse Heart Disease Cookbook.",
-            ingredients: "1 bunch kale\n1 loaf fresh 100% whole-grain bread, sliced\n cup Cannellini Bean Sauceln1 cup grape tomatoes, halved\nbalsamic glaze",
-            directions: "Place the kale leaves in a large pot of boiling water. Cover and cook until tender, about 5 minutes. Drain in a colander, then squeeze out any extra liquid with your hands (you don't want soggy bread). InToast 8 pieces of bread, and place them on a handsome serving platter. InSpread a tablespoon of the Cannellini Bean Sauce on the toasted bread, then cover with a layer of kale and top with a scattering of grape tomatoes. Drizzlelngenerously with the balsamic glaze, and grab one for yourself before they all disappear.",
+            ingredients: "1 bunch kale\n1 loaf fresh 100% whole-grain bread, sliced\n cup Cannellini Bean Sauce\n1 cup grape tomatoes, halved\nbalsamic glaze",
+            directions: "Place the kale leaves in a large pot of boiling water. Cover and cook until tender, about 5 minutes. Drain in a colander, then squeeze out any extra liquid with your hands (you don't want soggy bread). InToast 8 pieces of bread, and place them on a handsome serving platter. InSpread a tablespoon of the Cannellini Bean Sauce on the toasted bread, then cover with a layer of kale and top with a scattering of grape tomatoes. Drizzle\ngenerously with the balsamic glaze, and grab one for yourself before they all disappear.",
             category:"Appetizer",
             datePublished: "2015-06-28",
             url: "https://www.forksoverknives.com/recipes/vegan-snacks-appetizers/kale-bruschetta/"
