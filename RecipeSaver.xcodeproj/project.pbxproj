@@ -20,6 +20,7 @@
 		4094272A2C4D3C11003B523A /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427292C4D3C11003B523A /* RecipeModel.swift */; };
 		4094272C2C4D4E7F003B523A /* RecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094272B2C4D4E7F003B523A /* RecipeCard.swift */; };
 		409427322C4D9637003B523A /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427312C4D9637003B523A /* RecipeList.swift */; };
+		409427342C4DAF22003B523A /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427332C4DAF22003B523A /* RecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		409427292C4D3C11003B523A /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		4094272B2C4D4E7F003B523A /* RecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCard.swift; sourceTree = "<group>"; };
 		409427312C4D9637003B523A /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
+		409427332C4DAF22003B523A /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		4094271B2C4C5719003B523A /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				409427332C4DAF22003B523A /* RecipeView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				409427222C4C5775003B523A /* NewRecipeView.swift in Sources */,
 				409427282C4D346E003B523A /* TabBar.swift in Sources */,
 				409427242C4C5789003B523A /* FavoritesView.swift in Sources */,
+				409427342C4DAF22003B523A /* RecipeView.swift in Sources */,
 				409427322C4D9637003B523A /* RecipeList.swift in Sources */,
 				4094271E2C4C574D003B523A /* HomeView.swift in Sources */,
 				4094270C2C4C553B003B523A /* ContentView.swift in Sources */,

@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct HomeView: View {
+    init() {
+        //Use this if NavigationBarTitle is with Large Font
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "AccentColor") ?? UIColor.red]
+    }
+    
     var body: some View {
         NavigationView {
-            List(Recipe.all) { recipe in
-                Text(recipe.name)
-                    .navigationTitle("My Recipes")
+            ScrollView {
+                RecipeList(recipes: Recipe.all)
             }
+            .navigationTitle("My Recipes")
         }
         .navigationViewStyle(.stack)
     }
