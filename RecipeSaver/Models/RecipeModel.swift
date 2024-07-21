@@ -58,7 +58,7 @@ extension Recipe {
         ),
         
         Recipe(
-            name:"Kale Bruschetta",
+            name:"Kale Cheese Bruschetta",
             image: "https://img.taste.com.au/FYjm5H3D/w720-h480-cfill-q80/taste/2016/11/blt-bruschettas-89298-1.jpeg",
             description: "We adore this as an appetizer, and so does everyohe else. It is always the first empty platter at our holiday party. No one knows it is plant-based; they just know it is so yummy. \nFrom The Prevent and Reverse Heart Disease Cookbook.",
             ingredients: "1 bunch kale\n1 loaf fresh 100% whole-grain bread, sliced\n cup Cannellini Bean Sauce\n1 cup grape tomatoes, halved\nbalsamic glaze",
@@ -127,7 +127,7 @@ extension Recipe {
 
         
         Recipe(
-          name: "Spicy Edamame",
+          name: "Spicy Chilli Edamame",
           image: "https://www.acouplecooks.com/wp-content/uploads/2020/03/Spicy-Edamame-004.jpg",
           description: "A quick and healthy snack with a kick.",
           ingredients: """
