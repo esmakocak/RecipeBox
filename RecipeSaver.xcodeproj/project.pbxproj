@@ -16,6 +16,7 @@
 		409427222C4C5775003B523A /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427212C4C5775003B523A /* NewRecipeView.swift */; };
 		409427242C4C5789003B523A /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427232C4C5789003B523A /* FavoritesView.swift */; };
 		409427262C4C5795003B523A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427252C4C5795003B523A /* SettingsView.swift */; };
+		409427282C4D346E003B523A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427272C4D346E003B523A /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		409427212C4C5775003B523A /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
 		409427232C4C5789003B523A /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		409427252C4C5795003B523A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		409427272C4D346E003B523A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				4094270B2C4C553B003B523A /* ContentView.swift */,
+				409427272C4D346E003B523A /* TabBar.swift */,
 				4094271D2C4C574D003B523A /* HomeView.swift */,
 				4094271F2C4C575C003B523A /* CategoriesView.swift */,
 				409427212C4C5775003B523A /* NewRecipeView.swift */,
@@ -203,6 +206,7 @@
 				409427262C4C5795003B523A /* SettingsView.swift in Sources */,
 				409427202C4C575C003B523A /* CategoriesView.swift in Sources */,
 				409427222C4C5775003B523A /* NewRecipeView.swift in Sources */,
+				409427282C4D346E003B523A /* TabBar.swift in Sources */,
 				409427242C4C5789003B523A /* FavoritesView.swift in Sources */,
 				4094271E2C4C574D003B523A /* HomeView.swift in Sources */,
 				4094270C2C4C553B003B523A /* ContentView.swift in Sources */,
