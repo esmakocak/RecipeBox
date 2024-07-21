@@ -47,7 +47,7 @@ extension Recipe {
             ),
         
         Recipe(
-            name: "Apple, and Quinoa Salad",
+            name: "Apple and Quinoa Salad",
             image: "https://www.recipegirl.com/wp-content/uploads/2016/09/Spinach-and-Quinoa-Salad-with-Apple.jpeg",
             description: "Each bite of this colorful salad is filled with the flavors of favorite fall ingredients such as apples, butternut squash, and pumpkin seeds. For optimum freshness and texture, wait to add the dressing until just before serving. InnNote that this recipe calls for cooked quinoa, so have that ready to go: For 1% cups cooked quinoa, rinse and drain 4 cup quinoa; cook according to package directions; and drain if needed. Check out our Grains Cooking Guide for more tips on prepping grains like a pro.",
             ingredients: "2 cups inch pieces peeled butternut squash\n% cup pumpkin seeds\n5% teaspoon ground cinnamon\n1 lemon\n2 tablespoons pure maple syrup\n1 tablespoon Dijon mustard\n3 cups stemmed and chopped kale\n1% cups cooked quinoa\n cup chopped apple\n1 cup sliced green onionsSea salt and freshly ground black pepper, to taste",
@@ -80,7 +80,7 @@ extension Recipe {
         ),
         
         Recipe(
-          name: "Blueberry Banana Oatmeal",
+          name: "Blueberry Oatmeal",
           image: "https://www.saltycanary.com/wp-content/uploads/2019/07/Blueberry-Banana-Oatmeal-Salty-Canary-59-of-2-copy-480x480.jpg",
           description: "A nutritious and filling breakfast that can be customized with your favorite toppings.",
           ingredients: """
@@ -104,7 +104,7 @@ extension Recipe {
         ),
         
         Recipe(
-          name: "Garlic Parmesan Roasted Broccoli",
+          name: "Roasted Broccoli",
           image: "https://s23209.pcdn.co/wp-content/uploads/2014/09/240124_DD_garlic-parm-broccoli_189-760x1140.jpg",
           description: "A simple and delicious side dish that's perfect for any meal.",
           ingredients: """
@@ -148,7 +148,7 @@ extension Recipe {
         ),
         
         Recipe(
-          name: "Pineapple Ginger Smoothie",
+          name: "Pineapple Smoothie",
           image: "https://images.eatthismuch.com/img/906927_Shamarie84_c9cb0a63-7194-4eef-a7f0-006a11e19f85.png",
           description: "A refreshing and healthy smoothie.",
           ingredients: """

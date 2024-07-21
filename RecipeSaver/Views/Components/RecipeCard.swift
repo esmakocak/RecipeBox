@@ -16,20 +16,38 @@ struct RecipeCard: View {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
+                    .frame(width: 160, height: 217)
+                    .clipped()
+                    .overlay(alignment: .bottomLeading) {
+                        Text(recipe.name)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .shadow(color: .black, radius: 3, x: 0, y: 0)
+                            .padding()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(Color.black.opacity(0.5))
+                    }
             } placeholder: {
                 Image(systemName: "photo")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 40, height: 40, alignment: .center)
+                    .frame(width: 40, height: 40)
                     .foregroundColor(.white.opacity(0.7))
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .overlay(alignment: .bottomLeading) {
+                        Text(recipe.name)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .shadow(color: .black, radius: 3, x: 0, y: 0)
+                            .padding()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
             }
         }
         .frame(width: 160, height: 217, alignment: .top)
-        .background(LinearGradient(gradient: Gradient(colors: [Color(.gray).opacity(0.3), Color.gray]), startPoint: .top, endPoint: .bottom))
+        .background(LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.3), Color.gray]), startPoint: .top, endPoint: .bottom))
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-        .shadow(color: .black.opacity(0.3), radius: 15, x:0, y:10)
-        
+        .shadow(color: .black.opacity(0.3), radius: 15, x: 0, y: 10)
     }
 }
 
