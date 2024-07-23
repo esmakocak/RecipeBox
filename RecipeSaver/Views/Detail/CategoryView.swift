@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct CategoryView: View {
+    @EnvironmentObject var recipesVM: RecipesViewModel
     var category: Category
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ScrollView {
-            RecipeList(recipes: Recipe.all.filter{ $0.category == category.rawValue })
+            RecipeList(recipes: recipesVM.recipes.filter{ $0.category == category.rawValue })
         }
         .navigationTitle(category.rawValue + "s")
         .navigationBarBackButtonHidden()
@@ -31,4 +32,5 @@ struct CategoryView: View {
 
 #Preview {
     CategoryView(category: Category.dessert)
+        .environmentObject(RecipesViewModel())
 }
