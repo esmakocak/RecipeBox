@@ -30,7 +30,7 @@ struct CategoryCard: View {
         }
         .frame(width: 350, height: 80)
         .background(.white)
-        .clipShape(RoundedRectangle(cornerRadius: 40, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
         .shadow(color: .black.opacity(0.3), radius: 5, x: 3, y: 3)
     }
 }
