@@ -64,6 +64,7 @@ struct AddRecipeView: View {
                             .navigationBarBackButtonHidden(true)
                     } label: {
                         Button{
+                            saveRecipe()
                             navigationToRecipe = true
                         } label: {
                             Label("Done", systemImage: "checkmark")
@@ -84,4 +85,19 @@ struct AddRecipeView: View {
 #Preview {
     AddRecipeView()
         .environmentObject(RecipesViewModel())
+}
+
+extension AddRecipeView {
+    private func saveRecipe() {
+        let now = Date()
+    
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-mm-dd"
+        
+        let datePublished = dateFormatter.string(from: now)
+        print(datePublished)
+        
+        let recipe = Recipe(name: name, image: "", description: description, ingredients: ingredients, directions: directions, category: selectedCategory.rawValue, datePublished: datePublished, url: "")
+        recipesVM.addRecipe(recipe: recipe)
+    }
 }
