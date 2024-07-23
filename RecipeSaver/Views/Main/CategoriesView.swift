@@ -8,10 +8,20 @@
 import SwiftUI
 
 struct CategoriesView: View {
+    
     var body: some View {
         NavigationView {
-            Text("Categories")
-                .navigationTitle("Categories")
+            ScrollView {
+                LazyVStack {
+                    ForEach(Category.allCases) { category in
+                        CategoryCard(category: category)
+                            .padding(.vertical, 5)
+                            .padding(.horizontal)
+                    }
+                }
+                .padding(.top)
+            }
+            .navigationTitle("Categories")
         }
         .navigationViewStyle(.stack)
     }
@@ -20,3 +30,4 @@ struct CategoriesView: View {
 #Preview {
     CategoriesView()
 }
+

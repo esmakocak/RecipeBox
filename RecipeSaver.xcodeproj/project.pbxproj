@@ -21,6 +21,7 @@
 		4094272C2C4D4E7F003B523A /* RecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094272B2C4D4E7F003B523A /* RecipeCard.swift */; };
 		409427322C4D9637003B523A /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427312C4D9637003B523A /* RecipeList.swift */; };
 		409427342C4DAF22003B523A /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427332C4DAF22003B523A /* RecipeView.swift */; };
+		409427362C4E910B003B523A /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427352C4E910B003B523A /* CategoryCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		4094272B2C4D4E7F003B523A /* RecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCard.swift; sourceTree = "<group>"; };
 		409427312C4D9637003B523A /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		409427332C4DAF22003B523A /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		409427352C4E910B003B523A /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				4094272B2C4D4E7F003B523A /* RecipeCard.swift */,
 				409427312C4D9637003B523A /* RecipeList.swift */,
+				409427352C4E910B003B523A /* CategoryCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				409427222C4C5775003B523A /* NewRecipeView.swift in Sources */,
 				409427282C4D346E003B523A /* TabBar.swift in Sources */,
 				409427242C4C5789003B523A /* FavoritesView.swift in Sources */,
+				409427362C4E910B003B523A /* CategoryCard.swift in Sources */,
 				409427342C4DAF22003B523A /* RecipeView.swift in Sources */,
 				409427322C4D9637003B523A /* RecipeList.swift in Sources */,
 				4094271E2C4C574D003B523A /* HomeView.swift in Sources */,

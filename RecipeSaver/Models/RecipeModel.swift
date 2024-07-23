@@ -7,17 +7,43 @@
 
 import Foundation
 
-enum Category: String {
-    case breakfast = "Breakfast"
-    case soup = "Soup"
-    case salad = "Salad"
-    case appetizer = "Appetizer"
-    case main = "Main"
-    case side = "Side"
+enum Category: String, CaseIterable, Identifiable {
+    var id: String { self.rawValue }
     case dessert = "Dessert"
-    case snack = "Snack"
+    case breakfast = "Breakfast"
+    case salad = "Salad"
+    case main = "Main"
     case drink = "Drink"
+    case soup = "Soup"
+    case snack = "Snack"
+    case appetizer = "Appetizer"
+    case side = "Side"
+
+    
+    var iconName: String {
+        switch self {
+        case .dessert:
+            return "dessert"
+        case .main:
+            return "main"
+        case .appetizer:
+            return "appetizer"
+        case .salad:
+            return "salad"
+        case .soup:
+            return "soup"
+        case .breakfast:
+            return "breakfast"
+        case .side:
+            return "side"
+        case .snack:
+            return "snack"
+        case .drink:
+            return "drink"
+        }
+    }
 }
+
 
 struct Recipe: Identifiable {
     let id = UUID()
