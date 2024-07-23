@@ -30,7 +30,7 @@ struct NewRecipeView: View {
                     .shadow(color: .black.opacity(0.3), radius: 7, x: 3, y: 3)
                 }
                 .navigationTitle("New Recipe")
-            } .padding(.bottom, 100)
+            } .padding(.bottom, 30)
         }
         .navigationViewStyle(.stack)
         .sheet(isPresented: $showAddRecipe) {
