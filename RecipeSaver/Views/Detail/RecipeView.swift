@@ -1,18 +1,14 @@
-//
-//  RecipeView.swift
-//  RecipeSaver
-//
-//  Created by Esma Koçak on 22.07.2024.
-//
-
 import SwiftUI
 
 struct RecipeView: View {
     var recipe: Recipe
+    @EnvironmentObject var recipesVM: RecipesViewModel
     @Environment(\.presentationMode) var presentationMode
-    
+
+    @State private var showingDeleteConfirmation = false
+
     var body: some View {
-        ScrollView{
+        ScrollView {
             AsyncImage(url: URL(string: recipe.image)) { image in
                 image
                     .resizable()
@@ -42,11 +38,11 @@ struct RecipeView: View {
                     .foregroundColor(Color("AccentColor"))
                 
                 VStack (alignment: .leading, spacing: 30) {
-                    if !recipe.description.isEmpty{
+                    if !recipe.description.isEmpty {
                         Text(recipe.description)
                     }
                     
-                    if !recipe.ingredients.isEmpty{
+                    if !recipe.ingredients.isEmpty {
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Ingredients")
                                 .font(.headline)
@@ -59,7 +55,7 @@ struct RecipeView: View {
                         }
                     }
                     
-                    if !recipe.directions.isEmpty{
+                    if !recipe.directions.isEmpty {
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Directions")
                                 .font(.headline)
@@ -70,7 +66,6 @@ struct RecipeView: View {
                                     .font(.body)
                             }
                         }
-                        
                     }
                     
                 }
@@ -88,16 +83,32 @@ struct RecipeView: View {
                      Image(systemName: "arrowshape.turn.up.backward.fill")
                 }
             }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    showingDeleteConfirmation = true
+                }) {
+                    Image(systemName: "trash")
+                        .foregroundColor(.red)
+                }
+            }
         }
-        
+        // Uyarı (Alert) kodu burada
+        .alert(isPresented: $showingDeleteConfirmation) {
+            Alert(
+                title: Text("Do you want to delete this recipe?"),
+                message: Text("This recipe will be permanently deleted."),
+                primaryButton: .destructive(Text("Delete")) {
+                    // Tarif silme işlemi
+                    recipesVM.deleteRecipe(recipeId: recipe.id)
+                    presentationMode.wrappedValue.dismiss()
+                },
+                secondaryButton: .cancel()
+            )
+        }
     }
 }
 
 #Preview {
     RecipeView(recipe: Recipe.all[2])
+        .environmentObject(RecipesViewModel())
 }
-
-
-
-
-

@@ -45,8 +45,8 @@ enum Category: String, CaseIterable, Identifiable {
 }
 
 
-struct Recipe: Identifiable {
-    let id = UUID()
+struct Recipe: Identifiable, Codable {
+    var id = UUID()
     let name: String
     let image: String
     let description: String

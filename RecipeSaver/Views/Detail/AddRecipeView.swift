@@ -59,10 +59,16 @@ struct AddRecipeView: View {
                 }
                 
                 ToolbarItem{
-                    NavigationLink(isActive: $navigationToRecipe) {
-                        RecipeView(recipe: recipesVM.recipes.sorted{ $0.datePublished > $1.datePublished }[0])
-                            .navigationBarBackButtonHidden(true)
-                    } label: {
+                    NavigationLink(
+                            destination: Group {
+                                if let latestRecipe = recipesVM.recipes.last {
+                                    RecipeView(recipe: latestRecipe)
+                                } else {
+                                    Text("No recipes available")
+                                }
+                            },
+                            isActive: $navigationToRecipe
+                        ) {
                         Button{
                             saveRecipe()
                             navigationToRecipe = true
@@ -90,14 +96,24 @@ struct AddRecipeView: View {
 extension AddRecipeView {
     private func saveRecipe() {
         let now = Date()
-    
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd"
-        
-        let datePublished = dateFormatter.string(from: now)
-        print(datePublished)
-        
-        let recipe = Recipe(name: name, image: "", description: description, ingredients: ingredients, directions: directions, category: selectedCategory.rawValue, datePublished: datePublished, url: "")
-        recipesVM.addRecipe(recipe: recipe)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let datePublished = dateFormatter.string(from: now)
+            
+            let recipe = Recipe(
+                name: name,
+                image: "",
+                description: description,
+                ingredients: ingredients,
+                directions: directions,
+                category: selectedCategory.rawValue,
+                datePublished: datePublished,
+                url: ""
+            )
+            
+            recipesVM.addRecipe(recipe: recipe)
+            
+            // En son eklenen tarifi navigasyona geçmek için ayarla
+            navigationToRecipe = true
     }
 }

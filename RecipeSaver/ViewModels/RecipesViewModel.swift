@@ -8,14 +8,41 @@
 import Foundation
 
 class RecipesViewModel: ObservableObject {
-    @Published private(set) var recipes: [Recipe] = []
+    @Published var recipes: [Recipe] = [] {
+        didSet {
+            saveItems()
+        }
+    }
+    let itemsKey: String = "items_list"
     
     init() {
-        recipes = Recipe.all
+        getItems()
     }
+    
+    func getItems() {
+        guard 
+            let data = UserDefaults.standard.data(forKey: itemsKey),
+            let savedItems = try? JSONDecoder().decode([Recipe].self, from: data)
+        else {return}
+        
+        self.recipes = savedItems
+    }
+    
+    
+    func deleteRecipe(recipeId: UUID) {
+        recipes.removeAll { $0.id == recipeId }
+    }
+    
     
     func addRecipe(recipe: Recipe) {
         recipes.append(recipe)
     }
+    
+    func saveItems() {
+        if let encodedData = try? JSONEncoder().encode(recipes) {
+            UserDefaults.standard.setValue(encodedData, forKey: itemsKey)
+        }
+    }
+    
     
 }
