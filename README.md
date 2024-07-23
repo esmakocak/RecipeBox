@@ -24,7 +24,7 @@ Upcoming features:
 <img width="341" alt="Screenshot 2024-07-23 at 15 42 29" src="https://github.com/user-attachments/assets/4ff42f1a-b99f-4647-bf90-e33f592f907d">
 <img width="334" alt="Screenshot 2024-07-23 at 21 35 47" src="https://github.com/user-attachments/assets/b9d40551-e51d-4f8a-918a-29e00e398da7">
 <img width="334" alt="Screenshot 2024-07-23 at 21 38 26" src="https://github.com/user-attachments/assets/bddd6b5b-68ea-4bf3-928b-57035
-<img width="310" alt="Screenshot 2024-07-23 at 22 26 29" src="https://github.com/user-attachments/assets/11b26a06-481f-409f-a693-01019f6d08c4">
+<img width="310" alt="Screenshot 2024-07-23 at 22 27 35" src="https://github.com/user-attachments/assets/2695fd89-20da-44f4-90ce-7bd6230860f2">
 <img width="310" alt="Screenshot 2024-07-23 at 22 26 37" src="https://github.com/user-attachments/assets/a735bb73-23f0-43e7-87e4-4c896641387d">
 
 
