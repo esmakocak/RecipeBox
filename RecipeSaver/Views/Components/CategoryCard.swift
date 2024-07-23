@@ -22,6 +22,7 @@ struct CategoryCard: View {
                     .padding(.bottom, 10)
                 Text(category.rawValue + "s")
                     .font(.headline)
+                    .foregroundColor(Color("bg"))
                 Spacer()
             }
             

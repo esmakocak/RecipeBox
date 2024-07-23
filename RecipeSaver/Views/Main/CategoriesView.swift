@@ -14,9 +14,11 @@ struct CategoriesView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(Category.allCases) { category in
-                        CategoryCard(category: category)
-                            .padding(.vertical, 5)
-                            .padding(.horizontal)
+                        NavigationLink(destination: CategoryView(category: category)) {
+                            CategoryCard(category: category)
+                                .padding(.vertical, 5)
+                                .padding(.horizontal)
+                        }
                     }
                 }
                 .padding(.top)
@@ -30,4 +32,5 @@ struct CategoriesView: View {
 #Preview {
     CategoriesView()
 }
+
 

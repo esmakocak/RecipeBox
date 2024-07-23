@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400032C42C4FC5E50074C881 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400032C32C4FC5E50074C881 /* CategoryView.swift */; };
 		4094270A2C4C553B003B523A /* RecipeSaverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409427092C4C553B003B523A /* RecipeSaverApp.swift */; };
 		4094270C2C4C553B003B523A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094270B2C4C553B003B523A /* ContentView.swift */; };
 		4094270E2C4C553D003B523A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4094270D2C4C553D003B523A /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		400032C32C4FC5E50074C881 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		409427062C4C553B003B523A /* RecipeSaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeSaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409427092C4C553B003B523A /* RecipeSaverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSaverApp.swift; sourceTree = "<group>"; };
 		4094270B2C4C553B003B523A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				409427332C4DAF22003B523A /* RecipeView.swift */,
+				400032C32C4FC5E50074C881 /* CategoryView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				409427242C4C5789003B523A /* FavoritesView.swift in Sources */,
 				409427362C4E910B003B523A /* CategoryCard.swift in Sources */,
 				409427342C4DAF22003B523A /* RecipeView.swift in Sources */,
+				400032C42C4FC5E50074C881 /* CategoryView.swift in Sources */,
 				409427322C4D9637003B523A /* RecipeList.swift in Sources */,
 				4094271E2C4C574D003B523A /* HomeView.swift in Sources */,
 				4094270C2C4C553B003B523A /* ContentView.swift in Sources */,

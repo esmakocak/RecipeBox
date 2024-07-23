@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeView: View {
     var recipe: Recipe
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ScrollView{
@@ -78,12 +79,22 @@ struct RecipeView: View {
             .padding(.horizontal)
         }
         .ignoresSafeArea(.container, edges: .top)
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }) {
+                     Image(systemName: "arrowshape.turn.up.backward.fill")
+                }
+            }
+        }
         
     }
 }
 
 #Preview {
-    RecipeView(recipe: Recipe.all[7])
+    RecipeView(recipe: Recipe.all[2])
 }
 
 
