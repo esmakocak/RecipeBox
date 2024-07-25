@@ -3,11 +3,15 @@
 //  RecipeSaver
 //
 //  Created by Esma Koçak on 23.07.2024.
-//
+
 
 import SwiftUI
+import PhotosUI
 
 struct AddRecipeView: View {
+    @State private var photosPickerItem: PhotosPickerItem?
+    @State private var recipeImage: UIImage?
+
     @EnvironmentObject var recipesVM: RecipesViewModel
     @State private var name: String = ""
     @State private var selectedCategory: Category = Category.main
@@ -15,12 +19,33 @@ struct AddRecipeView: View {
     @State private var ingredients: String = ""
     @State private var directions: String = ""
     @State private var navigationToRecipe = false
-    
+
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationView {
             Form {
+                Section(header: Text("Photo")) {
+                    PhotosPicker(selection: $photosPickerItem, matching: .images) {
+                        HStack {
+                            Image(systemName: "camera.fill")
+                                .foregroundColor(.accentColor)
+                            Text("Upload a photo")
+                        }
+                    }
+                }
+                
+                // Resmi görüntüleme bölümü
+                if let image = recipeImage {
+                    Section(header: Text("Selected Photo")) {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(20)
+                            .frame(width: 200, height: 200) // İsteğe bağlı olarak boyutu ayarlayın
+                    }
+                }
+                
                 Section(header: Text("Name")) {
                     TextField("Recipe Name", text: $name)
                 }
@@ -48,9 +73,20 @@ struct AddRecipeView: View {
                 }
                 
             }
-            .toolbar(content: {
+            .onChange(of: photosPickerItem) { newItem in
+                if let photosPickerItem = newItem {
+                    Task {
+                        if let data = try? await photosPickerItem.loadTransferable(type: Data.self) {
+                            if let image = UIImage(data: data) {
+                                recipeImage = image
+                            }
+                        }
+                    }
+                }
+            }
+            .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button{
+                    Button {
                         dismiss()
                     } label: {
                         Label("Cancel", systemImage: "xmark")
@@ -58,18 +94,18 @@ struct AddRecipeView: View {
                     }
                 }
                 
-                ToolbarItem{
+                ToolbarItem {
                     NavigationLink(
-                            destination: Group {
-                                if let latestRecipe = recipesVM.recipes.last {
-                                    RecipeView(recipe: latestRecipe)
-                                } else {
-                                    Text("No recipes available")
-                                }
-                            },
-                            isActive: $navigationToRecipe
-                        ) {
-                        Button{
+                        destination: Group {
+                            if let latestRecipe = recipesVM.recipes.last {
+                                RecipeView(recipe: latestRecipe)
+                            } else {
+                                Text("No recipes available")
+                            }
+                        },
+                        isActive: $navigationToRecipe
+                    ) {
+                        Button {
                             saveRecipe()
                             navigationToRecipe = true
                         } label: {
@@ -78,9 +114,8 @@ struct AddRecipeView: View {
                         }
                     }
                     .disabled(name.isEmpty)
-
                 }
-            })
+            }
             .navigationTitle("New Recipe")
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -96,24 +131,24 @@ struct AddRecipeView: View {
 extension AddRecipeView {
     private func saveRecipe() {
         let now = Date()
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            let datePublished = dateFormatter.string(from: now)
-            
-            let recipe = Recipe(
-                name: name,
-                image: "",
-                description: description,
-                ingredients: ingredients,
-                directions: directions,
-                category: selectedCategory.rawValue,
-                datePublished: datePublished,
-                url: ""
-            )
-            
-            recipesVM.addRecipe(recipe: recipe)
-            
-            // En son eklenen tarifi navigasyona geçmek için ayarla
-            navigationToRecipe = true
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let datePublished = dateFormatter.string(from: now)
+        
+        let recipe = Recipe(
+            name: name,
+            image: "",
+            description: description,
+            ingredients: ingredients,
+            directions: directions,
+            category: selectedCategory.rawValue,
+            datePublished: datePublished,
+            url: ""
+        )
+        
+        recipesVM.addRecipe(recipe: recipe)
+        
+        // En son eklenen tarifi navigasyona geçmek için ayarla
+        navigationToRecipe = true
     }
 }
