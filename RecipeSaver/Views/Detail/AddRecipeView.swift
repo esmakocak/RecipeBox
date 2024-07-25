@@ -4,14 +4,12 @@
 //
 //  Created by Esma Koçak on 23.07.2024.
 
-
 import SwiftUI
 import PhotosUI
 
 struct AddRecipeView: View {
     @State private var photosPickerItem: PhotosPickerItem?
     @State private var recipeImage: UIImage?
-
     @EnvironmentObject var recipesVM: RecipesViewModel
     @State private var name: String = ""
     @State private var selectedCategory: Category = Category.main
@@ -135,9 +133,11 @@ extension AddRecipeView {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let datePublished = dateFormatter.string(from: now)
         
+        let base64Image = recipeImage?.toBase64() ?? ""
+        
         let recipe = Recipe(
             name: name,
-            image: "",
+            image: base64Image,
             description: description,
             ingredients: ingredients,
             directions: directions,

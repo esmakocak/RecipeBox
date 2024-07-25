@@ -9,26 +9,31 @@ struct RecipeView: View {
 
     var body: some View {
         ScrollView {
-            AsyncImage(url: URL(string: recipe.image)) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(maxWidth: UIScreen.main.bounds.width)
-                    .overlay {
-                        LinearGradient(stops:[ Gradient.Stop(color: .clear, location: 0.8), Gradient.Stop(color: Color(hue: 0.696, saturation: 0.023, brightness: 0.151), location: 1)], startPoint: .top, endPoint: .bottom)
-                    }
-                
-            } placeholder: {
-                Image(systemName: "photo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .foregroundColor(.white.opacity(0.7))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            Group {
+                if let image = UIImage.fromBase64(recipe.image) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } else {
+                    Image(systemName: "photo")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.white.opacity(0.7))
+                }
             }
-            .frame(height: 300, alignment: .center)
+            .frame(maxWidth: .infinity)
+            .frame(height: 300)
             .clipped()
-            .background(LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.3), Color.gray]), startPoint: .top, endPoint: .bottom))
+            .background(
+                LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.3), Color.gray]), startPoint: .top, endPoint: .bottom)
+            )
+            .overlay(
+                LinearGradient(stops: [
+                    Gradient.Stop(color: .clear, location: 0.8),
+                    Gradient.Stop(color: Color(hue: 0.696, saturation: 0.023, brightness: 0.151), location: 1)
+                ], startPoint: .top, endPoint: .bottom)
+            )
+            
             
             VStack (alignment: .leading, spacing: 30) {
                 Text(recipe.name)
