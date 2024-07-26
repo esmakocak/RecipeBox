@@ -44,5 +44,15 @@ class RecipesViewModel: ObservableObject {
         }
     }
     
+    func toggleFavorite(for recipe: Recipe) {
+        if let index = recipes.firstIndex(where: { $0.id == recipe.id }) {
+            recipes[index].isFavorite.toggle()
+        }
+    }
+    
+    var favorites: [Recipe] {
+           recipes.filter { $0.isFavorite }
+    }
+    
     
 }

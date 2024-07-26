@@ -143,7 +143,8 @@ extension AddRecipeView {
             directions: directions,
             category: selectedCategory.rawValue,
             datePublished: datePublished,
-            url: ""
+            url: "",
+            isFavorite: false
         )
         
         recipesVM.addRecipe(recipe: recipe)

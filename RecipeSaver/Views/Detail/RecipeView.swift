@@ -18,6 +18,7 @@ struct RecipeView: View {
                     Image(systemName: "photo")
                         .resizable()
                         .scaledToFit()
+                        .frame(width: 100)
                         .foregroundColor(.white.opacity(0.7))
                 }
             }
@@ -87,6 +88,18 @@ struct RecipeView: View {
                 }) {
                      Image(systemName: "arrowshape.turn.up.backward.fill")
                 }
+            }
+            
+            // implement "add" favorites feature
+            ToolbarItem(placement: .topBarTrailing) {
+                Image(systemName: recipe.isFavorite ? "heart.fill" : "heart")
+                    .font(.system(size: 20))
+                    .foregroundColor( Color("AccentColor"))
+                    .onTapGesture {
+                        withAnimation(.easeInOut(duration: 0.5)) {
+                            recipesVM.toggleFavorite(for: recipe)
+                        }
+                    }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {

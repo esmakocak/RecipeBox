@@ -55,6 +55,7 @@ struct Recipe: Identifiable, Codable {
     let category: Category.RawValue
     let datePublished: String
     let url: String
+    var isFavorite: Bool = false
     
 }
 

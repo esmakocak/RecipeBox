@@ -20,6 +20,7 @@ struct RecipeCard: View {
                     Image(systemName: "photo")
                         .resizable()
                         .scaledToFit()
+                        .frame(width: 50)
                         .foregroundColor(.white.opacity(0.7))
                 }
             }
