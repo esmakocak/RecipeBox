@@ -13,11 +13,10 @@ RecipeSaver is a SwiftUI-based application designed to help you save and manage 
 
 **Updates:**
 - Added functionality to store and delete recipes in local storage using **UserDefaults**.
-- **upload photos** for your recipes.
+- **Upload photos** for your recipes.
 - Add recipes to favorites.
 
 **Upcoming features:**
-
 - Edit recipe.
 
   
