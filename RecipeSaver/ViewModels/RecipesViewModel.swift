@@ -17,7 +17,40 @@ class RecipesViewModel: ObservableObject {
     
     init() {
         getItems()
+        if recipes.isEmpty {
+            loadSampleRecipes() // Test amaçlı
+        }
     }
+
+    func loadSampleRecipes() {
+        let sampleRecipe1 = Recipe(
+            name: "Sample Recipe 1",
+            image: "",
+            description: "This is a sample recipe description for Recipe 1.",
+            ingredients: "Flour, Sugar, Eggs, Butter",
+            directions: "Mix ingredients and bake.",
+            category: "Dessert",
+            datePublished: "2024-07-25",
+            url: "",
+            isFavorite: false
+        )
+        
+        let sampleRecipe2 = Recipe(
+            name: "Sample Recipe 2",
+            image: "",
+            description: "This is a sample recipe description for Recipe 2.",
+            ingredients: "Chicken, Salt, Pepper, Olive Oil",
+            directions: "Season chicken and cook in a pan.",
+            category: "Main",
+            datePublished: "2024-07-25",
+            url: "",
+            isFavorite: false
+        )
+        
+        recipes = [sampleRecipe1, sampleRecipe2]
+    }
+
+    
     
     func getItems() {
         guard 

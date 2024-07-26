@@ -82,7 +82,7 @@ struct RecipeView: View {
         .ignoresSafeArea(.container, edges: .top)
         .navigationBarBackButtonHidden()
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
+            ToolbarItem(placement: .topBarLeading) {
                 Button(action: {
                     presentationMode.wrappedValue.dismiss()
                 }) {
@@ -101,15 +101,28 @@ struct RecipeView: View {
                         }
                     }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
+            
+            ToolbarItem(placement: .secondaryAction) {
+                Button(action: {
+                    
+                }) {
+                    Text("Edit")
+                    Image(systemName: "pencil.line")
+                }
+            }
+            
+            ToolbarItem(placement: .secondaryAction) {
                 Button(action: {
                     showingDeleteConfirmation = true
                 }) {
+                    Text("Delete")
                     Image(systemName: "trash")
-                        .foregroundColor(.red)
                 }
             }
+            
+            
         }
+        
         // Uyarı (Alert) kodu burada
         .alert(isPresented: $showingDeleteConfirmation) {
             Alert(
