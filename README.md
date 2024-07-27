@@ -1,4 +1,4 @@
-RecipeSaver is a SwiftUI-based application designed to help you save and manage your favorite recipes. The app allows you to categorize your recipes and easily add new ones.
+RecipeBox is a SwiftUI-based application designed to help you save and manage your favorite recipes. The app allows you to categorize your recipes and easily add new ones.
 
 **Features:**
 - Display a list of all your saved recipes.
