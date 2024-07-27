@@ -1,5 +1,4 @@
-![Untitled design](https://github.com/user-attachments/assets/da8e6b51-b198-4860-9c9d-ac8645eccacd)RecipeSaver is a SwiftUI-based application designed to help you save and manage your favorite recipes. The app allows you to categorize your recipes and easily add new ones.
-
+RecipeSaver is a SwiftUI-based application designed to help you save and manage your favorite recipes. The app allows you to categorize your recipes and easily add new ones.
 
 **Features:**
 - Display a list of all your saved recipes.
@@ -10,12 +9,6 @@
 - Add recipes to **favorites**.
 - Edit and **update** recipe.
 - Developed using **Combine** and **MVVM**.
-
-
-![Uploading Untitled design.svg…]()
-
-
-
 
  
 ![1](https://github.com/user-attachments/assets/f2132b49-58d1-4ef8-8d1a-bc318c35d339)
