@@ -24,6 +24,7 @@ RecipeSaver is a SwiftUI-based application designed to help you save and manage 
 <img width="339" alt="Screenshot 2024-07-27 at 19 25 06" src="https://github.com/user-attachments/assets/6a9ebc54-2a34-4ba5-8af3-5b37fbbde841">
 
 
+![E345349C-3B49-4193-9272-AB68AEF19471](https://github.com/user-attachments/assets/964242ca-e093-4060-a88f-0d5ebb420a5e)
 
 
 
