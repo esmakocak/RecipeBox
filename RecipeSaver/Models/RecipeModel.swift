@@ -57,6 +57,24 @@ struct Recipe: Identifiable, Codable {
     let url: String
     var isFavorite: Bool = false
     
+    
+    init(id: UUID = UUID(), name: String, image: String, description: String, ingredients: String, directions: String, category: String, datePublished: String, url: String, isFavorite: Bool) {
+        self.id = id
+        self.name = name
+        self.image = image
+        self.description = description
+        self.ingredients = ingredients
+        self.directions = directions
+        self.category = category
+        self.datePublished = datePublished
+        self.url = url
+        self.isFavorite = isFavorite
+    }
+    
+    func update(name: String, description: String, ingredients: String, directions: String) -> Recipe {
+        return Recipe(id: id, name: name, image: image, description: description, ingredients: ingredients, directions: directions, category: category, datePublished: datePublished, url: url, isFavorite: isFavorite)
+    }
+    
 }
 
 
@@ -70,7 +88,8 @@ extension Recipe {
             directions: "In a small bowl, cover the cashews with 1 cup hot water; let soak 20 minutes. Transfer cashews and remaining liquid to a blender; blend until smooth and creamy. Set aside. \nIn a saucepan, combine onion, carrots, bell pepper, rosemary, thyme, sage, and garlic. Add 2 cup water and saute over medium heat for 15 to 20 minutes, or until carrots are tender. InRemove pan from heat. Let vegetables cool for 10 minutes; then remove rosemary sprigs and thyme leaf. \nTransfer sauteed vegetables to a blender, and puree to a smooth paste. Return pureed vegetables to saucepan and add 3 cups water and 1 tablespoon lemon juice. Season with salt and pepper. Bring soup to boiling. InTo serve, place soup in individual bowls, drizzle with cashew cream, and garnish with pomegranate seeds and parsley.",
             category: "Soup",
             datePublished: "2019-11-11",
-            url: "https://www.forksoverknives.com/recipes/vegan-soups-stews/creamy-carrot-soup/"
+            url: "https://www.forksoverknives.com/recipes/vegan-soups-stews/creamy-carrot-soup/",
+            isFavorite: false
             ),
         
         Recipe(
@@ -81,7 +100,8 @@ extension Recipe {
             directions: "Preheat oven to 400°F. Line a 15x10-inch baking pan with parchment paper or a silicone baking mat. Arrange squash in the prepared baking pan. Roast 20 to 25 minutes or until squash is tender, brushing lightly with water if squash starts to look dry. Cool slightly on a wire rack. InMeanwhile, in a small bowl toss together pumpkin seeds and 3 teaspoon water; sprinkle with cinnamon. Place pumpkin seeds in a small, shallow baking pan. Roast 5 minutes or until lightly toasted; cool\nFor dressing, remove 1 teaspoon zest and squeeze 2 tablespoons juice from lemon. In a small bowl whisk together lemon zest and juice, maple syrup, and mustard. InIn a large bowl combine kale, quinoa, apple, green onions, and roasted squash. Add dressing; toss to coat. Season with salt and pepper. Top with pumpkin seeds.",
             category: "Salad",
             datePublished: "2019-10-22",
-            url:"https://www.forksoverknives.com/recipes/vegan-salads-sides/kale-apple-and-quinoa-salad/™"
+            url:"https://www.forksoverknives.com/recipes/vegan-salads-sides/kale-apple-and-quinoa-salad/™",
+            isFavorite: false
         ),
         
         Recipe(
@@ -92,7 +112,8 @@ extension Recipe {
             directions: "Place the kale leaves in a large pot of boiling water. Cover and cook until tender, about 5 minutes. Drain in a colander, then squeeze out any extra liquid with your hands (you don't want soggy bread). InToast 8 pieces of bread, and place them on a handsome serving platter. InSpread a tablespoon of the Cannellini Bean Sauce on the toasted bread, then cover with a layer of kale and top with a scattering of grape tomatoes. Drizzle\ngenerously with the balsamic glaze, and grab one for yourself before they all disappear.",
             category:"Appetizer",
             datePublished: "2015-06-28",
-            url: "https://www.forksoverknives.com/recipes/vegan-snacks-appetizers/kale-bruschetta/"
+            url: "https://www.forksoverknives.com/recipes/vegan-snacks-appetizers/kale-bruschetta/",
+            isFavorite: false
         ),
         
         Recipe(
@@ -103,7 +124,7 @@ extension Recipe {
             directions:"Preheat oven to 425°F. For filling, in a 4-qt. saucepan cook mushrooms, carrots, and celery over medium 3 to 4 minutes, stirring occasionally and adding water, 1 to 2 Tbsp, at a time, as needed to prevent sticking. Add 3 cups of the broth, the squash, onions, thyme, and bay leaf. Bring to boiling; reduce heat. Simmer, covered, 5 minutes or until vegetables are nearly tender. Stir in chickpeas, peas, and corn.Inwhisk together flour and the remaining & cup broth; stir into vegetables.",
             category: "Main",
             datePublished: "2019-11-25",
-            url: "https://www.forksoverknives.com/recipes/vegan-baked-stuffed/vegetable-pot-pia/"
+            url: "https://www.forksoverknives.com/recipes/vegan-baked-stuffed/vegetable-pot-pia/", isFavorite: false
         ),
         
         Recipe(
@@ -127,7 +148,8 @@ extension Recipe {
             """,
           category: "Breakfast",
           datePublished: "2023-05-22",
-          url: "https://www.saltycanary.com/blueberry-banana-oatmeal/"
+          url: "https://www.saltycanary.com/blueberry-banana-oatmeal/",
+          isFavorite: false
         ),
         
         Recipe(
@@ -149,7 +171,8 @@ extension Recipe {
             """,
           category: "Side",
           datePublished: "2023-06-15",
-          url: "https://damndelicious.net/2014/09/19/garlic-parmesan-roasted-broccoli/"
+          url: "https://damndelicious.net/2014/09/19/garlic-parmesan-roasted-broccoli/",
+          isFavorite: false
         ),
 
         
@@ -171,7 +194,8 @@ extension Recipe {
             """,
           category: "Snack",
           datePublished: "2023-07-03",
-          url: "https://www.acouplecooks.com/spicy-edamame/"
+          url: "https://www.acouplecooks.com/spicy-edamame/",
+          isFavorite: false
         ),
         
         Recipe(
@@ -190,7 +214,8 @@ extension Recipe {
             """,
           category: "Drink",
           datePublished: "2023-04-10",
-          url: "https://www.forksoverknives.com/recipes/vegan-snacks-appetizers/pineapple-ginger-smoothie/"
+          url: "https://www.forksoverknives.com/recipes/vegan-snacks-appetizers/pineapple-ginger-smoothie/",
+          isFavorite: false
         ),
         
         Recipe(
@@ -219,7 +244,8 @@ extension Recipe {
             """,
           category: "Dessert",
           datePublished: "2020-08-01",
-          url: "https://prettysimplesweet.com/chocolate-tiramisu/"
+          url: "https://prettysimplesweet.com/chocolate-tiramisu/",
+          isFavorite: false
         )
     ]
 }

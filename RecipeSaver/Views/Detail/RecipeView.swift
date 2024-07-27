@@ -4,7 +4,7 @@ struct RecipeView: View {
     var recipe: Recipe
     @EnvironmentObject var recipesVM: RecipesViewModel
     @Environment(\.presentationMode) var presentationMode
-
+    @State private var isEditing = false
     @State private var showingDeleteConfirmation = false
 
     var body: some View {
@@ -14,7 +14,17 @@ struct RecipeView: View {
                     Image(uiImage: image)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                } else {
+                        .frame(maxWidth: UIScreen.main.bounds.width)
+                }
+                
+                else if let image = UIImage(named: recipe.image) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(maxWidth: UIScreen.main.bounds.width)
+                }
+                
+                else {
                     Image(systemName: "photo")
                         .resizable()
                         .scaledToFit()
@@ -104,7 +114,7 @@ struct RecipeView: View {
             
             ToolbarItem(placement: .secondaryAction) {
                 Button(action: {
-                    
+                    isEditing = true
                 }) {
                     Text("Edit")
                     Image(systemName: "pencil.line")
@@ -135,6 +145,17 @@ struct RecipeView: View {
                 },
                 secondaryButton: .cancel()
             )
+        }
+        .sheet(isPresented: $isEditing) {
+            EditRecipeView(recipe: Binding(
+                get: { recipe },
+                set: { updatedRecipe in
+                    if let index = recipesVM.recipes.firstIndex(where: { $0.id == recipe.id }) {
+                        recipesVM.recipes[index] = updatedRecipe
+                    }
+                }
+            ))
+            .environmentObject(recipesVM)
         }
     }
 }

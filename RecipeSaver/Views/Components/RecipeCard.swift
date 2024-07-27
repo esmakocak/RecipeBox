@@ -16,7 +16,16 @@ struct RecipeCard: View {
                     Image(uiImage: image)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                } else {
+                }
+                
+                //test amaçlı sonra sil
+                else if let image = UIImage(named: recipe.image) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                }
+                
+                else {
                     Image(systemName: "photo")
                         .resizable()
                         .scaledToFit()
