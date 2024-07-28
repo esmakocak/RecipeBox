@@ -38,6 +38,7 @@ class RecipesViewModel: ObservableObject {
             directions: """
               Combine all ingredients in a blender. \n
               Blend until smooth.
+              Bon appetit!
               """,
             category: "Drink",
             datePublished: "2023-04-10",
