@@ -12,7 +12,7 @@ class NotificationManager {
     static let instance = NotificationManager() // Singleton
     
     func requestAuthorization() {
-        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+        let options: UNAuthorizationOptions = [.alert, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: options) { (success, error) in
             if let error = error {
                 print("ERROR: \(error)")
@@ -23,15 +23,43 @@ class NotificationManager {
     }
     
     func scheduleNotification() {
+        
+        guard let randomRecipe = Recipe.all.randomElement() else {
+            print("No recipes available.")
+            return
+        }
+        
         let content = UNMutableNotificationContent()
-        content.title = "This is my first notification!"
-        content.subtitle = "This was sooooo easy!"
+        content.title = "Time to cook!"
+        content.subtitle = "Let's try the \(randomRecipe.name) you saved."
         content.sound = .default
-        content.badge = 1
         
-        // time
-        let trigger = UNTimeIntervalNotificationTrigger
         
+        // MARK: Calendar Based Trigger
+        var dateComponents = DateComponents()
+        dateComponents.hour = 17
+        dateComponents.minute = 56
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        
+        
+        let request = UNNotificationRequest(
+            identifier: UUID().uuidString,
+            content: content,
+            trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Error adding notification: \(error.localizedDescription)")
+            }
+        }
+        
+        
+        func setupDailyNotifications() {
+            // Cancel all existing notifications
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+
+            scheduleNotification()
+        }
         
     }
     

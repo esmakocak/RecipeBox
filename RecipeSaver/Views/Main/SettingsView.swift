@@ -35,14 +35,17 @@ struct SettingsView: View {
                         NotificationManager.instance.requestAuthorization()
                     }
                 }
-                
-                //                Button("Allow Notifications"){
-                //                    NotificationManager.instance.requestAuthorization()
-                //                }
                 .navigationTitle("Settings")
+                
+                Button("Schedule notification") {
+                    NotificationManager.instance.scheduleNotification()
+                }
+                
                 Spacer()
             }
-            
+            .onAppear {
+                UIApplication.shared.applicationIconBadgeNumber = 0
+            }
             
             
         }
